@@ -46,3 +46,7 @@ git push -u origin master
 python3 -m venv .venv
 
 source .venv/bin/activate
+
+Для Windows:
+
+.venv\Scripts\activate
