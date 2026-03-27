@@ -1,0 +1,183 @@
+/* Базовые стили для всей страницы */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #b2e2f3;
+}
+
+/* Стили для заголовков */
+h1,
+h2 {
+  margin-bottom: 20px;
+  color: #15406a;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Стили для секций */
+section {
+  margin-bottom: 40px;
+  background-color: rgb(182, 201, 184);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для блока "Обо мне" */
+.about .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.photo img {
+  width: 50px;
+  border-radius: 10%;
+  border: 3px solid #c51c9b;
+}
+
+.description {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Стили для списка навыков */
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+li:before {
+  content: "✓ ";
+  color: #3498db;
+}
+
+/* Стили для ссылок */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Стили оощие для хедера и футера */
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Стили для хедера */
+header {
+  color: #f33aac;
+  font-size: 0.9rem;
+}
+
+/* Стили для футера */
+footer {
+  color: #1b33cd;
+  font-size: 0.8rem;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .about .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  /* Создаем гибкую структуру */
+  flex-direction: column;
+  /* Располагаем элементы вертикально */
+  min-height: 100vh;
+  /* Минимальная высота равна высоте вьюпорта */
+}
+
+.header .footer {
+  margin-top: auto;
+  /* Здесь вступает в действие магия Flexbox */
+}
+
+/* Контейнер подсказки */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+/* Текст подсказки */
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Показывать текст подсказки при наведении */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Example
+<style>
+<div class="tooltip">
+  Hover over me
+  <span class="tooltiptext">Some tooltip text</span>
+</div>
+</style>
+*/
+
+/*
+ [3](https://www.w3schools.com/css/css_tooltip.asp)[9](https://open-source-peace.github.io/w3schoolsrus/css/css_tooltip.html)
+
+**Объяснение**:
+* **HTML**: используют элемент контейнера (например, <div>) и добавляют класс `tooltip`. Текст подсказки помещается внутри встроенного элемента (например, <span>) с классом `tooltiptext`.
+* **CSS**: класс `tooltip` использует `position: relative`, что необходимо для позиционирования текста подсказки (по умолчанию — `position: absolute`). Класс `tooltiptext` содержит фактический текст подсказки, по умолчанию скрыт, и будет виден при наведении. Селектор `:hover` используется для отображения текста подсказки при наведении курсора на контейнер.
+
+ [3](https://www.w3schools.com/css/css_tooltip.asp)[9](https://open-source-peace.github.io/w3schoolsrus/css/css_tooltip.html)
+*/
